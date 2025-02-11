@@ -45,7 +45,7 @@ fn App() -> Element {
         document::Link { rel: "stylesheet", href: MAIN_CSS }
         div {
             onmousemove: move |event| {
-                cursor.set(Some(event.screen_coordinates()));
+                cursor.set(Some(event.client_coordinates()));
             },
             "Cursor position: {cursor:?}"
         }
